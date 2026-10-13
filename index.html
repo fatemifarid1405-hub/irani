@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مرورگر ایرانی</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- نوار بالای مرورگر -->
+    <header class="browser-header">
+        <div class="nav-buttons">
+            <button id="backBtn" title="عقب">◀</button>
+            <button id="forwardBtn" title="جلو">▶</button>
+            <button id="refreshBtn" title="رفرش">🔄</button>
+            <button id="homeBtn" title="خانه">🏠</button>
+        </div>
+        
+        <div class="address-bar">
+            <span class="lock-icon">🔒</span>
+            <input type="text" id="urlInput" placeholder="آدرس سایت یا عبارتی برای جستجو وارد کنید...">
+        </div>
+        
+        <div class="actions">
+            <button id="searchBtn" title="جستجو">🔍</button>
+            <button id="menuBtn" title="منو">☰</button>
+        </div>
+    </header>
+
+    <!-- پنجره اصلی نمایش سایت -->
+    <main class="browser-viewport">
+        <!-- صفحه خوش‌آمدگویی -->
+        <div id="welcomeScreen" class="welcome-screen">
+            <h1>🇮🇷 مرورگر ایرانی</h1>
+            <p>نسخه وب - مرحله اول</p>
+            <div class="quick-links">
+                <a href="#" data-url="https://www.google.com">گوگل</a>
+                <a href="#" data-url="https://www.wikipedia.org">ویکی‌پدیا</a>
+                <a href="#" data-url="https://www.github.com">گیت‌هاب</a>
+                <a href="#" data-url="https://www.youtube.com">یوتیوب</a>
+            </div>
+        </div>
+
+        <!-- iframe برای نمایش سایت‌ها -->
+        <iframe id="browserFrame" src="about:blank" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-modals"></iframe>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
